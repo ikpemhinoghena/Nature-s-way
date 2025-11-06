@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Premium Herbs | Natural and Curative Cure</title>
+    <meta name="description" content="Browse our premium collection of organic herbs, teas, tinctures, and wellness products with advanced filtering and expert guidance.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="buy herbs, medicinal plants, organic herbs, herbal remedies, natural medicine, wellness products">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/shop.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <div class="logo-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">Natural & Curative</span>
+                            <span class="logo-sub">Cure</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html" class="active">Shop Herbs</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="search-btn" id="shopSearchToggle">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="cart-btn" id="cartToggle">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <div class="search-header">
+                <h3>Search Our Herb Collection</h3>
+                <button class="close-search" id="closeSearch">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-input-group">
+                <input type="text" id="globalSearch" placeholder="Search herbs by name, benefits, or conditions...">
+                <button class="search-submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="search-suggestions">
+                <span class="suggestion-title">Popular Searches:</span>
+                <div class="suggestion-tags">
+                    <span class="suggestion-tag">Diabetes</span>
+                    <span class="suggestion-tag">Immunity</span>
+                    <span class="suggestion-tag">Anti-inflammatory</span>
+                    <span class="suggestion-tag">Digestive</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Healing Cart</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded here -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Your cart is empty</p>
+                <a href="shop.html" class="btn btn-primary">Start Shopping</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount">$0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" id="checkoutBtn">
+                <i class="fab fa-whatsapp"></i>
+                Checkout via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Shop Hero -->
+    <section class="shop-hero">
+        <div class="container">
+            <div class="shop-hero-content">
+                <div class="hero-text">
+                    <h1>Nature's Pharmacy Awaits</h1>
+                    <p>Discover premium, ethically sourced herbs with proven traditional use and modern scientific backing</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">24</span>
+                            <span class="stat-label">Premium Herbs</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Organic</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">✓</span>
+                            <span class="stat-label">Expert Verified</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="herb-spotlight">
+                        <div class="spotlight-herb">
+                            <i class="fas fa-leaf"></i>
+                            <span>Traditional Wisdom</span>
+                        </div>
+                        <div class="spotlight-herb">
+                            <i class="fas fa-flask"></i>
+                            <span>Science Backed</span>
+                        </div>
+                        <div class="spotlight-herb">
+                            <i class="fas fa-heart"></i>
+                            <span>Quality Guaranteed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Controls -->
+    <section class="shop-controls">
+        <div class="container">
+            <div class="controls-grid">
+                <div class="search-control">
+                    <div class="search-box">
+                        <input type="text" id="herbSearch" placeholder="Search herbs...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="benefit-filter">Filter by Benefit:</label>
+                        <select id="benefit-filter">
+                            <option value="">All Benefits</option>
+                            <option value="blood sugar">Blood Sugar Support</option>
+                            <option value="anti-inflammatory">Anti-inflammatory</option>
+                            <option value="immunity">Immunity Boost</option>
+                            <option value="antiviral">Antiviral</option>
+                            <option value="digestive">Digestive Health</option>
+                            <option value="respiratory">Respiratory Support</option>
+                            <option value="skin">Skin Health</option>
+                            <option value="liver">Liver Support</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="form-filter">Product Form:</label>
+                        <select id="form-filter">
+                            <option value="">All Forms</option>
+                            <option value="tea">Tea/Leaves</option>
+                            <option value="powder">Powder</option>
+                            <option value="capsules">Capsules</option>
+                            <option value="oil">Oil</option>
+                            <option value="extract">Extract</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sort-by">Sort by:</label>
+                        <select id="sort-by">
+                            <option value="name">Name (A-Z)</option>
+                            <option value="name-desc">Name (Z-A)</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="benefits">Most Benefits</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="view-controls">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="active-filters" id="activeFilters">
+                <!-- Active filters will appear here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-header">
+                <h2 id="productsCount">24 Premium Herbs Available</h2>
+                <div class="results-info">
+                    <span id="resultsText">Showing all herbs</span>
+                </div>
+            </div>
+            
+            <div class="products-container" id="productsContainer">
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+                
+                <div class="products-list hidden" id="productsList">
+                    <!-- List view will be loaded by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- <div class="load-more" id="loadMore">
+                <button class="btn btn-outline" id="loadMoreBtn">
+                    <i class="fas fa-redo"></i>
+                    Load More Herbs
+                </button>
+            </div> -->
+            <div class="load-more" id="loadMore">
+                <button class="btn btn-outline" id="loadMoreBtn">
+                    <i class="fas fa-redo"></i>
+                    Load More Herbs
+                </button>
+            </div>
+
+            <!-- Add this new section after load-more -->
+            <div class="help-section">
+                <div class="help-content">
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="help-text">
+                        <h3>Can't find what you're looking for?</h3>
+                        <p>We have access to hundreds of additional herbs and can source specific remedies for your needs.</p>
+                    </div>
+                    <div class="help-actions">
+                        <a href="contact.html" class="btn btn-outline">
+                            <i class="fas fa-envelope"></i>
+                            Custom Request
+                        </a>
+                        <a href="https://wa.me/2348163807836" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i>
+                            Quick Help
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Expert Guidance -->
+    <section class="expert-guidance">
+        <div class="container">
+            <div class="guidance-content">
+                <div class="guidance-text">
+                    <h2>Need Personalized Herbal Guidance?</h2>
+                    <p>Our certified herbalists are here to help you choose the right herbs for your unique health journey.</p>
+                    <div class="guidance-features">
+                        <div class="feature">
+                            <i class="fas fa-user-md"></i>
+                            <span>Certified Herbalists</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <span>24/7 Support</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Personalized Plans</span>
+                        </div>
+                    </div>
+                    <div class="guidance-actions">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-calendar"></i>
+                            Book Consultation
+                        </a>
+                        <a href="https://wa.me/2348163807836" class="btn btn-secondary">
+                            <i class="fab fa-whatsapp"></i>
+                            Quick Chat
+                        </a>
+                    </div>
+                </div>
+                <div class="guidance-visual">
+                    <div class="guidance-card">
+                        <div class="card-header">
+                            <i class="fas fa-star"></i>
+                            <h4>Expert Recommended</h4>
+                        </div>
+                        <p>"Our team selects each herb based on traditional wisdom and modern research to ensure optimal results."</p>
+                        <div class="expert-signature">
+                            <strong>Dr. Amina Johnson</strong>
+                            <span>Head Herbalist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter (same as index.html) -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Seasonal Wellness Wisdom</h2>
+                    <p>Get monthly guides on seasonal herbs, recipes, and wellness tips delivered to your inbox.</p>
+                </div>
+                
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-secondary">
+                            <span>Subscribe</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <p class="form-note">No spam, just pure herbal wisdom. Unsubscribe anytime.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+        <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <div class="logo-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="logo-text">
+                                <span class="logo-main">Natural & Curative</span>
+                                <span class="logo-sub">Cure</span>
+                            </div>
+                        </div>
+                        <p>Connecting you with nature's healing power since 2010.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4>Shop</h4>
+                            <ul>
+                                <li><a href="shop.html">All Herbs</a></li>
+                                <li><a href="shop.html?filter=tea">Teas & Infusions</a></li>
+                                <li><a href="shop.html?filter=tinctures">Tinctures</a></li>
+                                <li><a href="shop.html?filter=capsules">Capsules</a></li>
+                                <li><a href="shop.html?filter=seasonal">Seasonal Bundles</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="link-group">
+                            <h4>Learn</h4>
+                            <ul>
+                                <li><a href="learn.html">Herb Guides</a></li>
+                                <li><a href="learn.html#recipes">Recipes</a></li>
+                                <li><a href="learn.html#wellness">Wellness Tips</a></li>
+                                <li><a href="learn.html#blog">Blog</a></li>
+                                <li><a href="learn.html#videos">Video Library</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="link-group">
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="about.html">Our Story</a></li>
+                                <li><a href="about.html#sustainability">Sustainability</a></li>
+                                <li><a href="testimonials.html">Testimonials</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-legal">
+                        <p>&copy; 2024 Natural and Curative Cure. All rights reserved.</p>
+                        <div class="legal-links">
+                            <a href="privacy.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                            <a href="shipping.html">Shipping Policy</a>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/newsletter.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* base.css */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700&display=swap');
+
+:root {
+  /* Enhanced Nature-Inspired Palette */
+  --primary: #2E7D32;
+  --primary-light: #4CAF50;
+  --primary-dark: #1B5E20;
+  --secondary: #FF8F00;
+  --secondary-light: #FFA726;
+  --accent: #E57373;
+  --accent-hover: #EF5350;
+  --dark: #263238;
+  --light: #F5F7FA;
+  --gray: #90A4AE;
+  --white: #FFFFFF;
+
+  /* Typography */
+  --font-head: 'Cormorant Garamond', serif;
+  --font-subhead: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing & Effects */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 4rem;
+  --border-radius: 8px;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 6px 16px rgba(0,0,0,0.12);
+  --transition: all 0.3s ease;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--primary-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+}
+
+.section {
+  padding: var(--space-lg) 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: var(--space-md);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--secondary);
+  margin: var(--space-sm) auto;
+  border-radius: 2px;
+}

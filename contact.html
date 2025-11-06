@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Book Consultation | Natural and Curative Cure</title>
+    <meta name="description" content="Connect with our herbal experts. Book personalized consultations, get expert guidance, and start your healing journey with Natural and Curative Cure.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="herbal consultation, contact herbalist, book appointment, wellness consultation, natural medicine experts">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <div class="logo-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">Natural & Curative</span>
+                            <span class="logo-sub">Cure</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop Herbs</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="cart-btn">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <div class="hero-text">
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span>/</span>
+                        <span>Connect With Us</span>
+                    </div>
+                    <h1>Your Healing Journey<br>Starts Here</h1>
+                    <p class="hero-subtitle">Connect with certified herbalists for personalized guidance, or reach out with any questions about your wellness path</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="consultationsCounter">0</span>
+                            <span class="stat-label">Consultations</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="expertsCounter">0</span>
+                            <span class="stat-label">Expert Herbalists</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="responseCounter">0</span>
+                            <span class="stat-label">Hour Response</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="#consultation" class="btn btn-primary">
+                            <i class="fas fa-calendar-check"></i>
+                            Book Free Consultation
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-envelope"></i>
+                            Send Message
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="floating-elements">
+                        <div class="floating-element element-1">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="floating-element element-2">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="floating-element element-3">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="floating-element element-4">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                    </div>
+                    <div class="consultation-preview">
+                        <div class="preview-card">
+                            <div class="preview-header">
+                                <div class="expert-avatar">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <div class="expert-info">
+                                    <strong>Dr. Amina Johnson</strong>
+                                    <span>Chief Herbalist Online</span>
+                                </div>
+                            </div>
+                            <div class="preview-message">
+                                <p>"Ready to help you find the perfect herbal solution for your unique needs"</p>
+                            </div>
+                            <div class="preview-status">
+                                <div class="status-indicator"></div>
+                                <span>Available for consultation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Options -->
+    <section class="consultation-options" id="consultation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Consultation Path</h2>
+                <p>Select the type of guidance that best fits your wellness journey</p>
+            </div>
+            
+            <div class="consultation-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="discovery">
+                        <i class="fas fa-compass"></i>
+                        Discovery Call
+                    </button>
+                    <button class="tab-btn" data-tab="comprehensive">
+                        <i class="fas fa-star"></i>
+                        Comprehensive Consultation
+                    </button>
+                    <button class="tab-btn" data-tab="followup">
+                        <i class="fas fa-sync-alt"></i>
+                        Follow-up Session
+                    </button>
+                    <button class="tab-btn" data-tab="emergency">
+                        <i class="fas fa-comments"></i>
+                        Quick Support
+                    </button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="discovery">
+                        <div class="consultation-detail">
+                            <div class="detail-content">
+                                <div class="detail-header">
+                                    <h3>Free Discovery Call</h3>
+                                    <div class="price-tag free">Complimentary</div>
+                                </div>
+                                <p class="detail-description">Perfect for those new to herbal medicine. Let's explore if herbal solutions are right for you and create an initial wellness direction.</p>
+                                
+                                <div class="detail-features">
+                                    <h4>What's Included:</h4>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> 30-minute video consultation</li>
+                                        <li><i class="fas fa-check"></i> Initial health assessment</li>
+                                        <li><i class="fas fa-check"></i> Personalized herb recommendations</li>
+                                        <li><i class="fas fa-check"></i> Follow-up plan outline</li>
+                                        <li><i class="fas fa-check"></i> No obligation to continue</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="availability">
+                                    <h4>Next Available Slots:</h4>
+                                    <div class="slot-buttons">
+                                        <button class="slot-btn" data-time="tomorrow-10am">
+                                            <span>Tomorrow</span>
+                                            <strong>10:00 AM</strong>
+                                        </button>
+                                        <button class="slot-btn" data-time="tomorrow-2pm">
+                                            <span>Tomorrow</span>
+                                            <strong>2:00 PM</strong>
+                                        </button>
+                                        <button class="slot-btn" data-time="day-after-11am">
+                                            <span>Day After</span>
+                                            <strong>11:00 AM</strong>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-actions">
+                                <button class="btn btn-primary book-consultation" data-type="discovery">
+                                    <i class="fas fa-calendar-plus"></i>
+                                    Book Discovery Call
+                                </button>
+                                <div class="consultation-note">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>No credit card required</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="comprehensive">
+                        <div class="consultation-detail">
+                            <div class="detail-content">
+                                <div class="detail-header">
+                                    <h3>Comprehensive Consultation</h3>
+                                    <div class="price-tag">$97</div>
+                                </div>
+                                <p class="detail-description">Deep dive into your health concerns with a full assessment and customized herbal protocol designed specifically for your needs.</p>
+                                
+                                <div class="detail-features">
+                                    <h4>Complete Package Includes:</h4>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> 90-minute in-depth consultation</li>
+                                        <li><i class="fas fa-check"></i> Comprehensive health history review</li>
+                                        <li><i class="fas fa-check"></i> Custom herbal formulation</li>
+                                        <li><i class="fas fa-check"></i> Dietary and lifestyle recommendations</li>
+                                        <li><i class="fas fa-check"></i> 30-day follow-up email support</li>
+                                        <li><i class="fas fa-check"></i> Digital wellness plan</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="practitioner-selection">
+                                    <h4>Choose Your Herbalist:</h4>
+                                    <div class="practitioner-cards">
+                                        <div class="practitioner-card active" data-practitioner="amina">
+                                            <div class="practitioner-avatar">
+                                                <i class="fas fa-user-md"></i>
+                                            </div>
+                                            <div class="practitioner-info">
+                                                <strong>Dr. Amina Johnson</strong>
+                                                <span>Chief Herbalist</span>
+                                                <div class="specialties">
+                                                    <span class="specialty-tag">Chronic Conditions</span>
+                                                    <span class="specialty-tag">Women's Health</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="practitioner-card" data-practitioner="michael">
+                                            <div class="practitioner-avatar">
+                                                <i class="fas fa-user-md"></i>
+                                            </div>
+                                            <div class="practitioner-info">
+                                                <strong>Michael Rodriguez</strong>
+                                                <span>Clinical Herbalist</span>
+                                                <div class="specialties">
+                                                    <span class="specialty-tag">Digestive Health</span>
+                                                    <span class="specialty-tag">Stress Management</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-actions">
+                                <button class="btn btn-primary book-consultation" data-type="comprehensive">
+                                    <i class="fas fa-calendar-plus"></i>
+                                    Book Comprehensive Session
+                                </button>
+                                <div class="consultation-note">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Money-back guarantee</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="followup">
+                        <div class="consultation-detail">
+                            <div class="detail-content">
+                                <div class="detail-header">
+                                    <h3>Follow-up Session</h3>
+                                    <div class="price-tag">$45</div>
+                                </div>
+                                <p class="detail-description">Track your progress and adjust your herbal protocol with our expert guidance.</p>
+                                
+                                <div class="follow-up-form">
+                                    <h4>Pre-Session Update</h4>
+                                    <form class="progress-form">
+                                        <div class="form-group">
+                                            <label>Protocol Adherence</label>
+                                            <select required>
+                                                <option value="">Select your level of adherence</option>
+                                                <option value="strictly">Strictly following</option>
+                                                <option value="mostly">Mostly following</option>
+                                                <option value="partially">Partially following</option>
+                                                <option value="difficulty">Having difficulty</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Improvements Noticed</label>
+                                            <textarea rows="3" placeholder="Describe any positive changes..."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Current Challenges</label>
+                                            <textarea rows="3" placeholder="List any ongoing concerns..."></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="detail-actions">
+                                <button class="btn btn-primary book-consultation">
+                                    <i class="fas fa-calendar-plus"></i>
+                                    Schedule Follow-up
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="emergency">
+                        <div class="consultation-detail">
+                            <div class="detail-content">
+                                <div class="detail-header">
+                                    <h3>Quick Support Chat</h3>
+                                    <div class="price-tag free">Free</div>
+                                </div>
+                                <p class="detail-description">Need immediate guidance? Connect with our herbalists instantly through chat.</p>
+                                
+                                <div class="support-channels">
+                                    <div class="channel-card active">
+                                        <div class="channel-icon">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </div>
+                                        <h4>WhatsApp Support</h4>
+                                        <p>Direct chat with our herbalists</p>
+                                        <span class="response-time">
+                                            <i class="fas fa-clock"></i>
+                                            5-15 min response
+                                        </span>
+                                    </div>
+                                    
+                                    <div class="channel-card">
+                                        <div class="channel-icon">
+                                            <i class="fas fa-comments"></i>
+                                        </div>
+                                        <h4>Live Chat</h4>
+                                        <p>Web-based instant messaging</p>
+                                        <span class="response-time">
+                                            <i class="fas fa-clock"></i>
+                                            Immediate
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail-actions">
+                                <a href="https://wa.me/2348163807836" class="btn btn-primary">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Start WhatsApp Chat
+                                </a>
+                                <button class="btn btn-outline" onclick="openLiveChat()">
+                                    <i class="fas fa-comments"></i>
+                                    Open Live Chat
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Booking Calendar -->
+    <section class="booking-calendar">
+        <div class="container">
+            <div class="calendar-header">
+                <h2>Schedule Your Consultation</h2>
+                <p>Select your preferred date and time for a personalized herbal consultation</p>
+            </div>
+            
+            <div class="calendar-container">
+                <div class="calendar-sidebar">
+                    <div class="selected-slot-preview">
+                        <h4>Selected Appointment</h4>
+                        <div class="slot-preview" id="slotPreview">
+                            <div class="preview-placeholder">
+                                <i class="fas fa-calendar-day"></i>
+                                <span>Select a time slot to continue</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expert-availability">
+                        <h4>Available Experts</h4>
+                        <div class="expert-list">
+                            <div class="expert-item active">
+                                <div class="expert-status"></div>
+                                <div class="expert-avatar-sm">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <span>Dr. Amina Johnson</span>
+                            </div>
+                            <div class="expert-item">
+                                <div class="expert-status"></div>
+                                <div class="expert-avatar-sm">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <span>Michael Rodriguez</span>
+                            </div>
+                            <div class="expert-item">
+                                <div class="expert-status busy"></div>
+                                <div class="expert-avatar-sm">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <span>Sarah Chen</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timezone-info">
+                        <i class="fas fa-globe"></i>
+                        <span>All times shown in your local timezone</span>
+                    </div>
+                </div>
+                
+                <div class="calendar-main">
+                    <div class="calendar-nav">
+                        <button class="nav-btn prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h3 id="currentMonth">November 2024</h3>
+                        <button class="nav-btn next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="calendar-grid" id="calendarGrid">
+                        <!-- Calendar will be generated by JavaScript -->
+                    </div>
+                    
+                    <div class="time-slots">
+                        <h4>Available Time Slots</h4>
+                        <div class="slots-grid" id="timeSlotsGrid">
+                            <!-- Time slots will be loaded by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Multiple Ways to Connect</h2>
+                <p>Choose the communication method that works best for you</p>
+            </div>
+            
+            <div class="methods-grid">
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp Chat</h3>
+                    <p>Instant messaging with our herbal experts for quick questions and guidance</p>
+                    <div class="method-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Response time: 5-15 minutes</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-check"></i>
+                            <span>Free initial consultation</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/2348163807836" class="btn btn-outline method-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        Start Chat
+                    </a>
+                </div>
+                
+                <div class="method-card featured">
+                    <div class="method-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Consultation</h3>
+                    <p>Face-to-face virtual meetings for comprehensive herbal assessments</p>
+                    <div class="method-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>30-90 minute sessions</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-user-md"></i>
+                            <span>Certified herbalists</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary method-btn" onclick="scrollToConsultation()">
+                        <i class="fas fa-calendar"></i>
+                        Book Session
+                    </button>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Consultation</h3>
+                    <p>Detailed written responses with personalized herbal recommendations</p>
+                    <div class="method-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Response within 24 hours</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-file-medical"></i>
+                            <span>Comprehensive health review</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline method-btn" onclick="scrollToContactForm()">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Email
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Have questions about our herbs, need personalized advice, or want to share your story? We'd love to hear from you.</p>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="contactName">Your Name *</label>
+                            <input type="text" id="contactName" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address *</label>
+                            <input type="email" id="contactEmail" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactSubject">Subject *</label>
+                        <select id="contactSubject" name="subject" required>
+                            <option value="">What can we help you with?</option>
+                            <option value="herb-advice">Herb Recommendations</option>
+                            <option value="consultation">Book Consultation</option>
+                            <option value="product-question">Product Question</option>
+                            <option value="shipping">Shipping Inquiry</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="healthConcern">Primary Health Concern</label>
+                        <div class="concern-tags" id="concernTags">
+                            <span class="concern-tag" data-concern="digestive">Digestive Health</span>
+                            <span class="concern-tag" data-concern="immune">Immune Support</span>
+                            <span class="concern-tag" data-concern="stress">Stress & Anxiety</span>
+                            <span class="concern-tag" data-concern="sleep">Sleep Quality</span>
+                            <span class="concern-tag" data-concern="energy">Low Energy</span>
+                            <span class="concern-tag" data-concern="skin">Skin Health</span>
+                            <span class="concern-tag" data-concern="pain">Pain Management</span>
+                            <span class="concern-tag" data-concern="other">Other</span>
+                        </div>
+                        <input type="hidden" id="selectedConcerns" name="concerns">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactMessage">Your Message *</label>
+                        <textarea id="contactMessage" name="message" rows="6" placeholder="Tell us about your health journey, specific concerns, or how we can assist you..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactGoals">Wellness Goals</label>
+                        <textarea id="contactGoals" name="goals" rows="3" placeholder="What are you hoping to achieve with herbal medicine?"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                        <div class="form-note">
+                            <i class="fas fa-lock"></i>
+                            <span>Your information is secure and confidential</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Support Section -->
+    <section class="live-support">
+        <div class="container">
+            <div class="support-content">
+                <div class="support-text">
+                    <h2>Need Immediate Help?</h2>
+                    <p>Our herbal experts are available for quick questions and urgent concerns</p>
+                    
+                    <div class="support-stats">
+                        <div class="support-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-info">
+                                <strong>5 min</strong>
+                                <span>Average response time</span>
+                            </div>
+                        </div>
+                        
+                        <div class="support-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="stat-info">
+                                <strong>3 experts</strong>
+                                <span>Currently online</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="support-actions">
+                    <a href="https://wa.me/2348163807836" class="btn btn-primary support-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        Chat Now on WhatsApp
+                    </a>
+                    <a href="tel:+2348163807836" class="btn btn-outline support-btn">
+                        <i class="fas fa-phone"></i>
+                        Call Instantly
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Info -->
+    <section class="location-info">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-text">
+                    <h2>Visit Our Healing Space</h2>
+                    <p>Experience our herbs and consult with experts in person at our wellness center</p>
+                    
+                    <div class="location-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Natural & Curative Cure</strong>
+                                <span>123 Healing Way, Wellness District</span>
+                                <span>Lagos, Nigeria 100001</span>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Opening Hours</strong>
+                                <span>Monday - Friday: 9:00 AM - 6:00 PM</span>
+                                <span>Saturday: 10:00 AM - 4:00 PM</span>
+                                <span>Sunday: Closed</span>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Contact</strong>
+                                <span>+234 816 380 7836</span>
+                                <span>hello@naturalcurativecure.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <span>Interactive Map</span>
+                        <small>Showing our wellness center location</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation CTA -->
+    <section class="consultation-cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Ready to Transform Your Health?</h2>
+                    <p>Take the first step toward natural wellness with expert herbal guidance</p>
+                </div>
+                
+                <div class="cta-actions">
+                    <a href="#consultation" class="btn btn-primary">
+                        <i class="fas fa-calendar-check"></i>
+                        Book Free Consultation
+                    </a>
+                    <a href="shop.html" class="btn btn-secondary">
+                        <i class="fas fa-shopping-basket"></i>
+                        Browse Herbs
+                    </a>
+                    <a href="learn.html" class="btn btn-outline">
+                        <i class="fas fa-graduation-cap"></i>
+                        Learn First
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <div class="logo-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="logo-text">
+                                <span class="logo-main">Natural & Curative</span>
+                                <span class="logo-sub">Cure</span>
+                            </div>
+                        </div>
+                        <p>Connecting you with nature's healing power since 2010.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4>Consultation</h4>
+                            <ul>
+                                <li><a href="contact.html#consultation">Book Consultation</a></li>
+                                <li><a href="contact.html#contact">Contact Methods</a></li>
+                                <li><a href="pricing.html">Pricing</a></li>
+                                <li><a href="experts.html">Meet Our Experts</a></li>
+                                <li><a href="faq.html">Consultation FAQ</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="link-group">
+                            <h4>Support</h4>
+                            <ul>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="shipping.html">Shipping & Returns</a></li>
+                                <li><a href="consultation.html">Free Consultation</a></li>
+                                <li><a href="support.html">Customer Support</a></li>
+                                <li><a href="emergency.html">Urgent Help</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="link-group">
+                            <h4>Connect</h4>
+                            <ul>
+                                <li><a href="blog.html">Wellness Blog</a></li>
+                                <li><a href="workshops.html">Herbal Workshops</a></li>
+                                <li><a href="community.html">Community</a></li>
+                                <li><a href="wholesale.html">Wholesale</a></li>
+                                <li><a href="careers.html">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-legal">
+                        <p>&copy; 2024 Natural and Curative Cure. All rights reserved.</p>
+                        <div class="legal-links">
+                            <a href="privacy.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                            <a href="shipping.html">Shipping Policy</a>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal-content booking-modal">
+            <button class="modal-close" id="closeBookingModal">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="booking-content">
+                <div class="booking-header">
+                    <h3>Confirm Your Consultation</h3>
+                    <p>Review your appointment details before confirmation</p>
+                </div>
+                
+                <div class="booking-details" id="bookingDetails">
+                    <!-- Booking details will be filled by JavaScript -->
+                </div>
+                
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <label for="bookingName">Full Name *</label>
+                        <input type="text" id="bookingName" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bookingEmail">Email Address *</label>
+                        <input type="email" id="bookingEmail" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bookingPhone">Phone Number</label>
+                        <input type="tel" id="bookingPhone" name="phone" placeholder="For appointment reminders">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bookingConcern">Primary Health Concern</label>
+                        <textarea id="bookingConcern" name="concern" rows="3" placeholder="Briefly describe what you'd like to discuss"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-calendar-check"></i>
+                            Confirm Booking
+                        </button>
+                        <button type="button" class="btn btn-outline" id="cancelBooking">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Booking Confirmed!</h3>
+            <p>Your consultation has been scheduled successfully. We've sent a confirmation email with all the details.</p>
+            
+            <div class="success-details" id="successDetails">
+                <!-- Success details will be filled by JavaScript -->
+            </div>
+            
+            <div class="success-actions">
+                <button class="btn btn-primary" id="closeSuccessModal">
+                    <i class="fas fa-calendar"></i>
+                    Add to Calendar
+                </button>
+                <a href="prepare.html" class="btn btn-outline">
+                    <i class="fas fa-book"></i>
+                    Prepare for Consultation
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
