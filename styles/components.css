@@ -458,6 +458,7 @@
 /* Carousel Section */
 .herbs-carousel {
     background: var(--white);
+    padding: 5rem 0;
 }
 
 .carousel-container {
@@ -468,8 +469,9 @@
 
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     gap: 2rem;
+    padding: 1rem 0;
 }
 
 .herb-card {
@@ -479,6 +481,8 @@
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .herb-card:hover {
@@ -494,41 +498,81 @@
     justify-content: center;
     color: var(--white);
     font-size: 3rem;
+    position: relative;
+    overflow: hidden;
 }
 
-.herb-content {
+.herb-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.herb-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--secondary-amber);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.herb-info {
     padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.herb-name {
-    font-size: 1.3rem;
+.herb-info h3 {
+    font-family: var(--font-classic);
     color: var(--primary-deep);
     margin-bottom: 0.5rem;
+    font-size: 1.3rem;
 }
 
-.herb-latin {
-    font-style: italic;
-    color: var(--text-light);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-.herb-benefits {
+.herb-info p {
     color: var(--text-medium);
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
 }
 
-.herb-actions {
+.herb-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .herb-price {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--primary-emerald);
-    font-size: 1.1rem;
+    font-size: 1.25rem;
+}
+
+.herb-action-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--primary-emerald);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.herb-action-btn:hover {
+    background: var(--primary-forest);
+    transform: translateY(-2px);
 }
 
 .carousel-nav {
@@ -550,12 +594,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.2rem;
 }
 
-.carousel-btn:hover {
+.carousel-btn:hover:not(.disabled) {
     background: var(--primary-emerald);
     color: var(--white);
     transform: scale(1.1);
+}
+
+.carousel-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.carousel-btn.disabled:hover {
+    background: var(--white);
+    color: var(--primary-emerald);
+    transform: none;
 }
 
 /* Why Choose Us */

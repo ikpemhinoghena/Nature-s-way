@@ -221,7 +221,7 @@ function initializeHerbEncyclopedia() {
             description: "West African staple with potent antidiabetic and antimicrobial properties. Traditionally used for digestive health.",
             properties: ["Antidiabetic", "Antimicrobial", "Anti-inflammatory", "Digestive"],
             system: "immune",
-            image: "🌿"
+            image: "images/herbs/bitter-leaf.webp"
         },
         {
             id: 2,
@@ -230,7 +230,7 @@ function initializeHerbEncyclopedia() {
             description: "Nutrient-dense superfood with exceptional antioxidant and anti-inflammatory benefits.",
             properties: ["Antioxidant", "Anti-inflammatory", "Nutritive", "Energy Boost"],
             system: "immune",
-            image: "🪴"
+            image: "images/herbs/bitter-leaf.webp"
         },
         {
             id: 3,
@@ -239,7 +239,7 @@ function initializeHerbEncyclopedia() {
             description: "Golden spice with powerful curcumin content for inflammation reduction and joint support.",
             properties: ["Anti-inflammatory", "Antioxidant", "Joint Support", "Brain Health"],
             system: "immune",
-            image: "🟡"
+            image: "images/herbs/turmeric.jpg"
         },
         {
             id: 4,
@@ -248,7 +248,7 @@ function initializeHerbEncyclopedia() {
             description: "Adaptogenic herb for stress resilience, immune support, and mental clarity.",
             properties: ["Adaptogen", "Antiviral", "Stress Relief", "Immune Support"],
             system: "nervous",
-            image: "🌱"
+            image: "images/herbs/holy-basil.jpg"
         },
         {
             id: 5,
@@ -257,7 +257,7 @@ function initializeHerbEncyclopedia() {
             description: "Warming root excellent for digestive issues, nausea, and inflammatory conditions.",
             properties: ["Digestive", "Anti-inflammatory", "Antinausea", "Circulatory"],
             system: "digestive",
-            image: "🟤"
+            image: "images/herbs/ginger.jpg"
         },
         {
             id: 6,
@@ -266,7 +266,7 @@ function initializeHerbEncyclopedia() {
             description: "Cooling herb for digestive comfort, respiratory support, and mental clarity.",
             properties: ["Digestive", "Respiratory", "Mental Clarity", "Headache Relief"],
             system: "digestive",
-            image: "🍃"
+            image: "images/herbs/peppermint.jpg"
         }
     ];
 
@@ -283,7 +283,7 @@ function displayHerbs(herbs) {
         card.className = 'herb-card';
         card.innerHTML = `
             <div class="herb-image">
-                ${herb.image}
+                <img src="${herb.image}" alt="${herb.name}">
             </div>
             <div class="herb-content">
                 <h3 class="herb-name">${herb.name}</h3>

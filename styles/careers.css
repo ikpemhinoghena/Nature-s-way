@@ -1,0 +1,246 @@
+/* Careers Page Specific Styles */
+
+/* Department Filter Styles */
+.team-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0 3rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    background: var(--white);
+    border: 2px solid var(--primary-emerald);
+    border-radius: var(--radius-md);
+    color: var(--primary-forest);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-emerald);
+    color: var(--white);
+}
+
+/* Job Listings */
+.timeline-message {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(248, 250, 252, 0.8);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--primary-emerald);
+}
+
+.no-openings {
+    text-align: center;
+}
+
+.no-openings i {
+    font-size: 2rem;
+    color: var(--primary-emerald);
+    margin-bottom: 1rem;
+}
+
+.no-openings p {
+    margin: 0;
+    color: var(--text-medium);
+    font-style: italic;
+}
+
+/* Benefits Section */
+.sustainability-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.sustainability-stat {
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+}
+
+.stat-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-emerald) 0%, var(--primary-forest) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: var(--white);
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: var(--font-modern);
+}
+
+.stat-symbol {
+    font-size: 1rem;
+    margin-left: 0.2rem;
+}
+
+.stat-label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.sustainability-features {
+    margin-top: 2rem;
+}
+
+.feature {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.feature i {
+    font-size: 1.8rem;
+    color: var(--primary-emerald);
+    min-width: 40px;
+}
+
+.feature h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.feature p {
+    margin: 0;
+    color: var(--text-medium);
+}
+
+/* Impact Timeline */
+.impact-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.impact-timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary-emerald);
+}
+
+.impact-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.impact-item::before {
+    content: '';
+    position: absolute;
+    left: -29px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 3px solid var(--primary-emerald);
+}
+
+.impact-year {
+    font-weight: 700;
+    color: var(--primary-forest);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.impact-content h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.impact-content p {
+    margin: 0;
+    color: var(--text-medium);
+}
+
+/* Team CTA */
+.team-cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--light-cream) 0%, var(--light-ivory) 100%);
+    border-radius: var(--radius-xl);
+    margin-top: 3rem;
+}
+
+.team-cta h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-deep);
+}
+
+.team-cta p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--text-medium);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 80%;
+    }
+    
+    .sustainability-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat-circle {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .feature {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .impact-timeline {
+        padding-left: 1.5rem;
+    }
+    
+    .impact-item::before {
+        left: -24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-cta {
+        padding: 2rem 1rem;
+    }
+    
+    .stat-circle {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .stat-number {
+        font-size: 1.3rem;
+    }
+}

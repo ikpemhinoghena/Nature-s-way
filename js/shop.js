@@ -13,7 +13,7 @@ const herbs = [
     {
         id: 1,
         name: "Vernonia amygdalina (Bitter Leaf)",
-        image: "/images/herbs/bitter-leaf.png",
+        image: "images/herbs/bitter-leaf.webp",
         description: "West African staple herb with evidence for antidiabetic, antimicrobial and anti-inflammatory effects. Traditionally used for digestive health and immune support.",
         benefits: ["Blood Sugar (Diabetes)", "Antimicrobial/Antimalarial", "Anti-inflammatory (Lupus)", "Digestive Health"],
         nutrients: { 
@@ -31,7 +31,7 @@ const herbs = [
     {
         id: 2,
         name: "Irish Moss (Chondrus crispus)",
-        image: "images/herbs/irish-moss.jpg",
+        image: "images/herbs/irish-moss-c.webp",
         description: "Mineral-rich red seaweed supporting mucosal immunity, antiviral defense, and metabolic balance. Excellent for respiratory and skin health.",
         benefits: ["Immunity/Antiviral (Herpes/HIV)", "Anti-inflammatory", "Gut & Metabolic Support", "Respiratory Health"],
         nutrients: { 
@@ -502,7 +502,7 @@ function createProductCard(product, viewType) {
     if (viewType === 'grid') {
         card.innerHTML = `
             <div class="product-image">
-                <i class="fas fa-leaf"></i>
+                <img src="${product.image}" alt="${product.name}">
                 ${product.featured ? '<span class="product-badge">Featured</span>' : ''}
             </div>
             <div class="product-content">
@@ -531,14 +531,13 @@ function createProductCard(product, viewType) {
                 
                 <div class="product-actions">
                     <span class="product-price">${priceFormatted}</span>
-                    <button class="whatsapp-btn add-to-cart-btn" data-id="${product.id}">
+                    <button class="whatsapp-btn" data-id="${product.id}">
                         <i class="fab fa-whatsapp"></i>
                         Get Now
                     </button>
-                    <button class="add-to-cart-btn" data-id="${product.id}">
-                        <i class="fas fa-cart-plus"></i>
-                        Cart
-                    </button>
+                    <div class="product-info">
+                        <span class="info-text"><i class="fas fa-info-circle"></i> Dosage and price details will be communicated immediately you reach out. Click 'Get Now'</span>
+                    </div>
                 </div>
             </div>
         `;
@@ -546,7 +545,8 @@ function createProductCard(product, viewType) {
         // List view
         card.innerHTML = `
             <div class="product-image">
-                <i class="fas fa-leaf"></i>
+                <img src="${product.image}" alt="${product.name}">
+                ${product.featured ? '<span class="product-badge">Featured</span>' : ''}
             </div>
             <div class="product-content">
                 <h3 class="product-name">${product.name}</h3>
@@ -566,28 +566,30 @@ function createProductCard(product, viewType) {
                         <span class="detail-label">Dosage:</span>
                         <span class="detail-value">${product.nutrients.dose}</span>
                     </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Safety:</span>
+                        <span class="detail-value">${product.nutrients.safety}</span>
+                    </div>
                 </div>
             </div>
             <div class="product-actions">
                 <span class="product-price">${priceFormatted}</span>
-                <button class="whatsapp-btn add-to-cart-btn" data-id="${product.id}">
+                <button class="whatsapp-btn" data-id="${product.id}">
                     <i class="fab fa-whatsapp"></i>
                     Get Now
                 </button>
-                <button class="add-to-cart-btn" data-id="${product.id}">
-                    <i class="fas fa-cart-plus"></i>
-                    Cart
-                </button>
+                <div class="product-info">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="info-text">Dosage and price details will be communicated immediately when you click 'Get Now'</span>
+                </div>
             </div>
         `;
     }
     
     // Add event listeners
     const whatsappBtn = card.querySelector('.whatsapp-btn');
-    const cartBtn = card.querySelector('.add-to-cart-btn');
     
     whatsappBtn.addEventListener('click', () => openWhatsApp(product));
-    cartBtn.addEventListener('click', () => addToCart(product));
     
     return card;
 }
@@ -1138,6 +1140,24 @@ style.textContent = `
     .no-results p {
         color: var(--text-light);
         margin-bottom: 1.5rem;
+    }
+    
+    .product-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        padding: 0.75rem;
+        background: var(--light-cream);
+        border-radius: var(--radius-md);
+        font-size: 0.9rem;
+        color: var(--text-medium);
+        text-align: center;
+    }
+    
+    .product-info i {
+        color: var(--primary-emerald);
     }
 `;
 document.head.appendChild(style);

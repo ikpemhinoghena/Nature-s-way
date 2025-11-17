@@ -4,13 +4,14 @@ class HerbCarousel {
         this.prevBtn = document.getElementById('carouselPrev');
         this.nextBtn = document.getElementById('carouselNext');
         this.currentIndex = 0;
+        this.cardWidth = 0;
         this.herbs = [
             {
                 id: 'turmeric',
                 name: 'Turmeric',
                 description: 'Powerful anti-inflammatory and antioxidant properties',
                 price: '$12.99',
-                image: 'images/herbs/turmeric.jpg',
+                image: 'images/herbs/bitter-leaf.webp',
                 category: 'Roots'
             },
             {
@@ -62,6 +63,7 @@ class HerbCarousel {
         this.renderCarousel();
         this.attachEventListeners();
         this.startAutoPlay();
+        this.updateButtons();
     }
     
     renderCarousel() {
@@ -71,7 +73,10 @@ class HerbCarousel {
             this.track.appendChild(herbCard);
         });
         
-        this.updateCarousel();
+        // Wait for rendering to complete
+        setTimeout(() => {
+            this.updateCarousel();
+        }, 0);
     }
     
     createHerbCard(herb) {
@@ -79,7 +84,7 @@ class HerbCarousel {
         card.className = 'herb-card';
         card.innerHTML = `
             <div class="herb-image">
-                <img src="${herb.image}" alt="${herb.name}">
+                <img src="${herb.image}" alt="${herb.name}" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiMxMGJhODEiPjxwYXRoIGQ9Ik0xMiAyQzguMTM0IDIgNSA1LjEzNCA1IDljMCAzLjg2NiAzLjEzNCA3IDcgN3M3LTMuMTM0IDctN0MxOSA1LjEzNCAxNS44NjYgMiAxMiAyem0wIDEyLjVhNS41IDUuNSAwIDEgMSAwLTExIDUuNSA1LjUgMCAwIDEgMCAxMXoiLz48L3N2Zz4=';">
                 <div class="herb-badge">${herb.category}</div>
             </div>
             <div class="herb-info">
@@ -98,14 +103,18 @@ class HerbCarousel {
     }
     
     updateCarousel() {
-        const cardWidth = this.track.querySelector('.herb-card').offsetWidth + 20;
-        this.track.style.transform = `translateX(-${this.currentIndex * cardWidth}px)`;
+        if (this.track.children.length > 0) {
+            // Calculate card width including gap (gap is 2rem = 32px)
+            this.cardWidth = this.track.querySelector('.herb-card').offsetWidth + 32;
+            this.track.style.transform = `translateX(-${this.currentIndex * this.cardWidth}px)`;
+        }
     }
     
     nextSlide() {
-        if (this.currentIndex < this.herbs.length - 1) {
+        if (this.currentIndex < this.herbs.length - 3) {
             this.currentIndex++;
             this.updateCarousel();
+            this.updateButtons();
         }
     }
     
@@ -113,6 +122,26 @@ class HerbCarousel {
         if (this.currentIndex > 0) {
             this.currentIndex--;
             this.updateCarousel();
+            this.updateButtons();
+        }
+    }
+    
+    updateButtons() {
+        // Disable buttons when at the beginning or end
+        this.prevBtn.disabled = this.currentIndex === 0;
+        this.nextBtn.disabled = this.currentIndex >= this.herbs.length - 3;
+        
+        // Add visual feedback for disabled state
+        if (this.prevBtn.disabled) {
+            this.prevBtn.classList.add('disabled');
+        } else {
+            this.prevBtn.classList.remove('disabled');
+        }
+        
+        if (this.nextBtn.disabled) {
+            this.nextBtn.classList.add('disabled');
+        } else {
+            this.nextBtn.classList.remove('disabled');
         }
     }
     
@@ -122,9 +151,10 @@ class HerbCarousel {
         
         // Add event delegation for herb action buttons
         this.track.addEventListener('click', (e) => {
-            if (e.target.classList.contains('herb-action-btn')) {
-                const herbId = e.target.getAttribute('data-herb-id');
-                const herbName = e.target.getAttribute('data-herb-name');
+            if (e.target.classList.contains('herb-action-btn') || e.target.closest('.herb-action-btn')) {
+                const button = e.target.classList.contains('herb-action-btn') ? e.target : e.target.closest('.herb-action-btn');
+                const herbId = button.getAttribute('data-herb-id');
+                const herbName = button.getAttribute('data-herb-name');
                 this.navigateToShop(herbId, herbName);
             }
         });
@@ -135,7 +165,7 @@ class HerbCarousel {
         
         this.track.addEventListener('touchstart', (e) => {
             startX = e.touches[0].clientX;
-        });
+        }, { passive: true });
         
         this.track.addEventListener('touchend', (e) => {
             endX = e.changedTouches[0].clientX;
@@ -148,6 +178,11 @@ class HerbCarousel {
                     this.prevSlide();
                 }
             }
+        }, { passive: true });
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            this.updateCarousel();
         });
     }
     
@@ -158,11 +193,12 @@ class HerbCarousel {
     
     startAutoPlay() {
         setInterval(() => {
-            if (this.currentIndex < this.herbs.length - 1) {
+            if (this.currentIndex < this.herbs.length - 3) {
                 this.nextSlide();
             } else {
                 this.currentIndex = 0;
                 this.updateCarousel();
+                this.updateButtons();
             }
         }, 5000);
     }
