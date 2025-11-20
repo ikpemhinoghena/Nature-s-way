@@ -93,10 +93,10 @@ function initializeTeamFilter() {
 function loadTeamMembers() {
     const teamData = [
         {
-            name: "Dr. Amina Johnson",
+            name: "Dr. Oshokha Timothy",
             role: "Founder & Chief Herbalist",
             department: "herbalists",
-            bio: "With over 20 years of experience in herbal medicine, Dr. Johnson combines traditional wisdom with modern scientific research to create effective healing protocols.",
+            bio: "With over 20 years of experience in herbal medicine, Dr. Timothy combines traditional wisdom with modern scientific research to create effective healing protocols.",
             expertise: ["Traditional Medicine", "Clinical Herbalism", "Research", "Mentorship"],
             icon: "👩‍⚕️"
         },
@@ -151,6 +151,11 @@ function displayTeamMembers(teamMembers) {
     grid.innerHTML = '';
 
     teamMembers.forEach(member => {
+        // Check if this is Dr. Oshokha Timothy to add custom social links
+        const isFounder = member.name.includes("Oshokha Timothy");
+        const twitterLink = isFounder ? "https://x.com/Oshokha_herbs" : "#";
+        const emailLink = isFounder ? "mailto:oshokha.orderherbs@gmail.com" : "#";
+        
         const memberCard = document.createElement('div');
         memberCard.className = `team-member ${member.department}`;
         memberCard.innerHTML = `
@@ -168,10 +173,10 @@ function displayTeamMembers(teamMembers) {
                     <a href="#" class="social-link">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="${emailLink}" class="social-link" ${isFounder ? '' : ''}>
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="${twitterLink}" class="social-link" ${isFounder ? 'target="_blank"' : ''}>
                         <i class="fab fa-twitter"></i>
                     </a>
                 </div>

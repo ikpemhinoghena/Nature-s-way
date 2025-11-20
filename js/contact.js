@@ -524,7 +524,7 @@ function initializeBookingSystem() {
                 </div>
                 <div class="info-item">
                     <span>Herbalist:</span>
-                    <strong>Dr. Amina Johnson</strong>
+                    <strong>Dr. Oshokha Timothy</strong>
                 </div>
             </div>
         `;
