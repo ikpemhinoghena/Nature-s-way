@@ -49,7 +49,7 @@ const herbs = [
     {
         id: 3,
         name: "Sutherlandia (Cancer Bush)",
-        image: "images/herbs/sutherlandia.jpg",
+        image: "images/herbs/cancer-bush2.webp",
         description: "South African tonic with immune-modulating and anti-inflammatory properties used during chronic illness. Supports overall vitality and wellness.",
         benefits: ["Immune Modulation", "Anti-inflammatory", "Energy/Appetite Support", "Chronic Illness Support"],
         nutrients: { 
@@ -67,7 +67,7 @@ const herbs = [
     {
         id: 4,
         name: "Neem Leaves (Azadirachta indica)",
-        image: "images/herbs/neem.jpg",
+        image: "images/herbs/neem-leaf.webp",
         description: "Traditional antimicrobial/antiviral leaf used for infections, skin, and metabolic support. Powerful detoxifying properties.",
         benefits: ["Antiviral (Herpes Support)", "Blood Sugar", "Skin & Detox", "Oral Health"],
         nutrients: { 
@@ -85,7 +85,7 @@ const herbs = [
     {
         id: 5,
         name: "Moringa oleifera (Miracle Tree)",
-        image: "images/herbs/moringa.jpg",
+        image: "images/herbs/moringa.webp",
         description: "Nutrient-dense antioxidant herb for immunity, inflammation, and blood sugar control. Packed with vitamins and minerals.",
         benefits: ["Blood Sugar (Diabetes)", "Anti-inflammatory", "Immunity/Energy", "Nutritional Support"],
         nutrients: { 
@@ -103,7 +103,7 @@ const herbs = [
     {
         id: 6,
         name: "Artemisia afra (African Wormwood)",
-        image: "images/herbs/african-wormwood.jpg",
+        image: "images/herbs/african-wormwood2.webp",
         description: "Trusted African herb for respiratory infections and immune support. Traditional remedy for fever and digestive issues.",
         benefits: ["Antimicrobial/Respiratory", "Immunity", "Anti-inflammatory", "Fever Reduction"],
         nutrients: { 
@@ -120,26 +120,26 @@ const herbs = [
     },
     {
         id: 7,
-        name: "Artemisia annua (Sweet Wormwood)",
-        image: "images/herbs/sweet-wormwood.jpg",
-        description: "Source of artemisinin; traditionally for fevers/infections; researched for antiviral and anti-inflammatory actions.",
-        benefits: ["Antiviral Support", "Anti-inflammatory", "Fever/Infection Support", "Immune Boost"],
+        name: "Myrrh (Commiphora myrrha)",
+        image: "images/herbs/myrrh.webp",
+        description: "Myrrh is a resinous sap extracted from trees of the Commiphora genus, most notably C. myrrha. It has been used for thousands of years in traditional medicine and religious ceremonies.",
+        benefits: ["Antiseptic Action", "Astringent Properties", "Oral/Throat Support", "Skin/Wound Care"],
         nutrients: { 
-            form: "Tea/extract", 
-            dose: "As directed", 
-            safety: "Not a drug substitute; pregnancy caution" 
+            form: "Tincture, Powder, Resin, Essential Oil (diluted)", 
+            dose: "Highly variable depending on application", 
+            safety: "Pregnancy caution; may stimulate uterine contractions" 
         },
         season: "Year-round",
         price: 24.99,
-        form: "extract",
-        popularity: 81,
+        form: "resin",
+        popularity: 72,
         inStock: true,
         featured: false
     },
     {
         id: 8,
         name: "Hypoxis hemerocallidea (African Potato)",
-        image: "images/herbs/african-potato.jpg",
+        image: "images/herbs/african-potato.webp",
         description: "Immune tonic with anti-inflammatory and antioxidant activity; used in chronic illness support and prostate health.",
         benefits: ["Immune Support", "Anti-inflammatory", "Blood Sugar Support", "Prostate Health"],
         nutrients: { 
@@ -157,7 +157,7 @@ const herbs = [
     {
         id: 9,
         name: "Phyllanthus niruri (Stonebreaker)",
-        image: "images/herbs/stonebreaker.jpg",
+        image: "images/herbs/stonebreaker2.webp",
         description: "Traditional liver/kidney herb with antiviral signals in lab studies and metabolic support. Excellent for urinary health.",
         benefits: ["Liver Support", "Antiviral Signals", "Blood Sugar Support", "Kidney Health"],
         nutrients: { 
@@ -175,7 +175,7 @@ const herbs = [
     {
         id: 10,
         name: "Nigella sativa (Black Seed)",
-        image: "images/herbs/black-seed.jpg",
+        image: "images/herbs/black-seed.webp",
         description: "Thymoquinone-rich immune/metabolic tonic used for antiviral support and inflammation control. Historical remedy.",
         benefits: ["Immunity/Antiviral", "Blood Sugar", "Anti-inflammatory", "Respiratory Health"],
         nutrients: { 
@@ -193,7 +193,7 @@ const herbs = [
     {
         id: 11,
         name: "Turmeric (Curcuma longa)",
-        image: "images/herbs/turmeric.jpg",
+        image: "images/herbs/turmeric.webp",
         description: "Curcumin-rich spice for inflammation reduction, metabolic and liver support. Powerful antioxidant properties.",
         benefits: ["Anti-inflammatory (Lupus/Joint)", "Metabolic/Liver", "Antioxidant", "Brain Health"],
         nutrients: { 
@@ -211,7 +211,7 @@ const herbs = [
     {
         id: 12,
         name: "Peppermint",
-        image: "images/herbs/peppermint.jpg",
+        image: "images/herbs/peppermint.webp",
         description: "Gentle digestive and sinus-clearing support; useful for symptom relief and mental clarity.",
         benefits: ["Digestion", "Sinus/Respiratory", "Headache Relief", "Mental Clarity"],
         nutrients: { 
@@ -229,7 +229,7 @@ const herbs = [
     {
         id: 13,
         name: "Prunus africana (African Cherry)",
-        image: "images/herbs/african-cherry.jpg",
+        image: "images/herbs/african-cherry.webp",
         description: "Traditional bark remedy for prostate/urinary health with anti-inflammatory effects and antioxidant properties.",
         benefits: ["Prostate/Urinary", "Anti-inflammatory", "Antioxidant", "Hormonal Balance"],
         nutrients: { 
@@ -247,7 +247,7 @@ const herbs = [
     {
         id: 14,
         name: "Catharanthus roseus (Madagascar Periwinkle)",
-        image: "images/herbs/madagascar-periwinkle.jpg",
+        image: "images/herbs/madagascar-periwinkle.webp",
         description: "Potent alkaloid-containing plant; traditional use for infections/metabolic issues; pharmaceutical anticancer source.",
         benefits: ["Antimicrobial Signals", "Metabolic Support", "Research Interest", "Traditional Use"],
         nutrients: { 
@@ -265,7 +265,7 @@ const herbs = [
     {
         id: 15,
         name: "Kigelia africana (Sausage Tree)",
-        image: "images/herbs/sausage-tree.jpg",
+        image: "images/herbs/sausage-tree.webp",
         description: "Topical favorite for skin infections and wound care; antimicrobial and anti-inflammatory activity.",
         benefits: ["Skin/Wound", "Antimicrobial", "Anti-inflammatory", "Topical Use"],
         nutrients: { 
@@ -283,7 +283,7 @@ const herbs = [
     {
         id: 16,
         name: "Annona muricata (Soursop / Graviola)",
-        image: "images/herbs/soursop.jpg",
+        image: "images/herbs/soursop.webp",
         description: "Traditionally used against tumors/infections; contains acetogenins (lab cytotoxicity). Immune support.",
         benefits: ["Antioxidant", "Inflammation Relief", "Digestive Support", "Immune Modulation"],
         nutrients: { 
@@ -301,7 +301,7 @@ const herbs = [
     {
         id: 17,
         name: "Garcinia kola (Bitter Kola)",
-        image: "images/herbs/bitter-kola.jpg",
+        image: "images/herbs/bitter-kola.webp",
         description: "West African seed used as antioxidant tonic with respiratory and metabolic benefits. Energy booster.",
         benefits: ["Antioxidant/Liver", "Respiratory", "Blood Sugar", "Energy Boost"],
         nutrients: { 
@@ -319,7 +319,7 @@ const herbs = [
     {
         id: 18,
         name: "Ocimum sanctum (Holy Basil / Tulsi)",
-        image: "images/herbs/holy-basil.jpg",
+        image: "images/herbs/holy-basil.webp",
         description: "Adaptogen for stress resilience, immune and antiviral support, and blood sugar balance. Mental clarity.",
         benefits: ["Adaptogen/Immunity", "Antiviral", "Blood Sugar", "Stress Relief"],
         nutrients: { 
@@ -337,7 +337,7 @@ const herbs = [
     {
         id: 19,
         name: "Bidens pilosa",
-        image: "images/herbs/bidens-pilosa.jpg",
+        image: "images/herbs/bidens-pilosa.webp",
         description: "Common tropical herb studied for glucose control and anti-inflammatory effects. Wound healing properties.",
         benefits: ["Blood Sugar (Diabetes)", "Anti-inflammatory", "Wound Healing", "Traditional Remedy"],
         nutrients: { 
@@ -355,7 +355,7 @@ const herbs = [
     {
         id: 20,
         name: "Boswellia spp. (Frankincense)",
-        image: "images/herbs/frankincense.jpg",
+        image: "images/herbs/frankincense.webp",
         description: "Resin with boswellic acids that strongly reduce inflammation; popular for joints/autoimmunity.",
         benefits: ["Anti-inflammatory (Lupus/Arthritis)", "Joint Mobility", "Respiratory Support", "Spiritual Use"],
         nutrients: { 
@@ -373,7 +373,7 @@ const herbs = [
     {
         id: 21,
         name: "Sclerocarya birrea (Marula)",
-        image: "images/herbs/marula.jpg",
+        image: "images/herbs/marula.webp",
         description: "Antioxidant-rich African tree; used for metabolic health, wound healing and immunity. Skin benefits.",
         benefits: ["Antioxidant", "Blood Sugar/Lipids", "Skin Repair", "Immune Support"],
         nutrients: { 
@@ -391,7 +391,7 @@ const herbs = [
     {
         id: 22,
         name: "Harpagophytum procumbens (Devil's Claw)",
-        image: "images/herbs/devils-claw.jpg",
+        image: "images/herbs/devils-claw.webp",
         description: "Root used to relieve joint/back pain with proven anti-inflammatory/analgesic actions. Mobility support.",
         benefits: ["Pain Relief", "Anti-inflammatory", "Mobility", "Arthritis Support"],
         nutrients: { 
@@ -409,7 +409,7 @@ const herbs = [
     {
         id: 23,
         name: "Glycyrrhiza glabra (Licorice)",
-        image: "images/herbs/licorice.jpg",
+        image: "images/herbs/licorice.webp",
         description: "Soothing antiviral root for mucous membranes, liver and respiratory support. Adrenal support.",
         benefits: ["Antiviral (Herpes Support)", "Mucosal Soothing", "Liver Support", "Adrenal Health"],
         nutrients: { 
@@ -427,7 +427,7 @@ const herbs = [
     {
         id: 24,
         name: "Tetrapleura tetraptera (Aridan)",
-        image: "images/herbs/aridan.jpg",
+        image: "images/herbs/aridan.webp",
         description: "West African spice for arthritis, asthma and metabolic complaints; anti-inflammatory and glucose-lowering activity.",
         benefits: ["Anti-inflammatory", "Blood Sugar", "Respiratory Support", "Arthritis Relief"],
         nutrients: { 
@@ -460,12 +460,32 @@ function displayProducts(products, view = 'grid') {
     listContainer.innerHTML = '';
     
     if (products.length === 0) {
+        // Get the current search term to include in the message
+        const searchTerm = document.getElementById('herbSearch').value || '';
+        const searchTermDisplay = searchTerm ? `"${searchTerm}"` : 'your selection';
+        
         const noResults = `
             <div class="no-results">
                 <i class="fas fa-search"></i>
-                <h3>No herbs found</h3>
-                <p>Try adjusting your filters or search terms</p>
-                <button class="btn btn-primary" id="clearAllFilters">Clear All Filters</button>
+                <h3>That herb is not on our website list</h3>
+                <p>We have access to hundreds of herbs and we're sure ${searchTermDisplay} will be part of our collection. Your health is our priority, and we're committed to helping you on your wellness journey.</p>
+                <p>Reach out to us directly and we'll respond immediately to help you find what you're looking for.</p>
+                <div class="no-results-actions">
+                    <a href="https://wa.me/2348163807836" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp Us
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Contact Page
+                    </a>
+                </div>
+                <div class="no-results-clear">
+                    <button class="btn btn-outline" id="clearAllFilters">
+                        <i class="fas fa-times"></i>
+                        Clear All Filters
+                    </button>
+                </div>
             </div>
         `;
         gridContainer.innerHTML = noResults;

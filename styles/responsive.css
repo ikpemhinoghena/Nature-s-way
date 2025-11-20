@@ -84,6 +84,17 @@
     .product-image {
         height: 200px;
     }
+    
+    /* New consultation section */
+    .consultation-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .consultation-text {
+        text-align: center;
+    }
 }
 
 /* Small devices (landscape phones, 768px and down) */
@@ -295,6 +306,21 @@
     .carousel-btn.next {
         right: 0;
     }
+    
+    /* New consultation section */
+    .herbalist-consultation {
+        padding: 2rem 1.5rem;
+    }
+    
+    .herbalist-image {
+        width: 200px;
+        height: 200px;
+        font-size: 4rem;
+    }
+    
+    .consultation-text h3 {
+        font-size: 1.75rem;
+    }
 }
 
 /* Extra small devices (portrait phones, 576px and down) */
@@ -414,6 +440,23 @@
     .carousel-dot.active {
         background-color: #8e44ad;
     }
+    
+    /* New consultation section */
+    .herbalist-image {
+        width: 150px;
+        height: 150px;
+        font-size: 3rem;
+    }
+    
+    .consultation-cta .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+    }
+    
+    .consultation-benefits li {
+        font-size: 0.9rem;
+    }
 }
 
 /* Ultra small devices (very small phones, 400px and down) */
@@ -464,6 +507,21 @@
     
     .product-content {
         padding: 0.75rem;
+    }
+    
+    /* New consultation section */
+    .herbalist-consultation {
+        padding: 1.5rem 1rem;
+    }
+    
+    .herbalist-image {
+        width: 120px;
+        height: 120px;
+        font-size: 2.5rem;
+    }
+    
+    .consultation-text h3 {
+        font-size: 1.5rem;
     }
 }
 

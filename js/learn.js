@@ -239,7 +239,7 @@ function initializeHerbEncyclopedia() {
             description: "Golden spice with powerful curcumin content for inflammation reduction and joint support.",
             properties: ["Anti-inflammatory", "Antioxidant", "Joint Support", "Brain Health"],
             system: "immune",
-            image: "images/herbs/turmeric.jpg"
+            image: "images/herbs/turmeric.webp"
         },
         {
             id: 4,
@@ -248,7 +248,7 @@ function initializeHerbEncyclopedia() {
             description: "Adaptogenic herb for stress resilience, immune support, and mental clarity.",
             properties: ["Adaptogen", "Antiviral", "Stress Relief", "Immune Support"],
             system: "nervous",
-            image: "images/herbs/holy-basil.jpg"
+            image: "images/herbs/holy-basil.webp"
         },
         {
             id: 5,
@@ -257,7 +257,7 @@ function initializeHerbEncyclopedia() {
             description: "Warming root excellent for digestive issues, nausea, and inflammatory conditions.",
             properties: ["Digestive", "Anti-inflammatory", "Antinausea", "Circulatory"],
             system: "digestive",
-            image: "images/herbs/ginger.jpg"
+            image: "images/herbs/ginger.webp"
         },
         {
             id: 6,
@@ -266,7 +266,7 @@ function initializeHerbEncyclopedia() {
             description: "Cooling herb for digestive comfort, respiratory support, and mental clarity.",
             properties: ["Digestive", "Respiratory", "Mental Clarity", "Headache Relief"],
             system: "digestive",
-            image: "images/herbs/peppermint.jpg"
+            image: "images/herbs/peppermint.webp"
         }
     ];
 

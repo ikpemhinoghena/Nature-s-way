@@ -3,6 +3,12 @@ class HerbCarousel {
         this.track = document.getElementById('carouselTrack');
         this.prevBtn = document.getElementById('carouselPrev');
         this.nextBtn = document.getElementById('carouselNext');
+        
+        // Check if carousel elements exist before proceeding
+        if (!this.track || !this.prevBtn || !this.nextBtn) {
+            return; // Exit if carousel elements are not found
+        }
+        
         this.currentIndex = 0;
         this.cardWidth = 0;
         this.herbs = [
@@ -19,7 +25,7 @@ class HerbCarousel {
                 name: 'Ginger',
                 description: 'Aids digestion and reduces nausea',
                 price: '$9.99',
-                image: 'images/herbs/ginger.jpg',
+                image: 'images/herbs/ginger.webp',
                 category: 'Roots'
             },
             {
@@ -27,7 +33,7 @@ class HerbCarousel {
                 name: 'Echinacea',
                 description: 'Boosts immune system function',
                 price: '$14.99',
-                image: 'images/herbs/echinacea.jpg',
+                image: 'images/herbs/echinacea.webp',
                 category: 'Flowers'
             },
             {
@@ -35,7 +41,7 @@ class HerbCarousel {
                 name: 'Lavender',
                 description: 'Promotes relaxation and better sleep',
                 price: '$11.99',
-                image: 'images/herbs/lavender.jpg',
+                image: 'images/herbs/lavender.webp',
                 category: 'Flowers'
             },
             {
@@ -43,7 +49,7 @@ class HerbCarousel {
                 name: 'Chamomile',
                 description: 'Reduces stress and aids sleep',
                 price: '$8.99',
-                image: 'images/herbs/chamomile.jpg',
+                image: 'images/herbs/chamomile.webp',
                 category: 'Flowers'
             },
             {
@@ -51,7 +57,7 @@ class HerbCarousel {
                 name: 'Peppermint',
                 description: 'Improves digestion and relieves headaches',
                 price: '$10.99',
-                image: 'images/herbs/peppermint.jpg',
+                image: 'images/herbs/peppermint.webp',
                 category: 'Leaves'
             }
         ];
@@ -60,6 +66,11 @@ class HerbCarousel {
     }
     
     init() {
+        // Check if carousel elements exist before initializing
+        if (!this.track || !this.prevBtn || !this.nextBtn) {
+            return;
+        }
+        
         this.renderCarousel();
         this.attachEventListeners();
         this.startAutoPlay();
