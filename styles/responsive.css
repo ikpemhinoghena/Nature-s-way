@@ -548,9 +548,9 @@
 /* Print Styles */
 @media print {
     .header,
+    .hero,
     .hero-scroll-indicator,
-    .newsletter,
-    .footer {
+    .newsletter {
         display: none;
     }
     
