@@ -100,8 +100,7 @@
         position: relative;
         top: auto;
         padding: 1.25rem 0;
-        box-shadow: none;
-    }
+        box-shadow: none    }
 }
 
 /* Further reduce padding on extra small screens */
