@@ -845,6 +845,41 @@
     overflow-x: hidden;
 }
 
+.form-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 50px;
+    font-family: var(--font-modern);
+    font-size: 1rem;
+    color: var(--text-dark);
+    background: white;
+    transition: var(--transition);
+    outline: none;
+}
+
+.newsletter-form input:focus {
+    border-color: var(--primary-emerald);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.newsletter-form input::placeholder {
+    color: var(--text-light);
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin: 0;
+    text-align: center;
+}
+
 /* Footer */
 .footer {
     background: #1a252f;
