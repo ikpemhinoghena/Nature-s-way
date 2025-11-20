@@ -53,6 +53,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    /* Prevent horizontal overflow */
+    overflow-x: hidden;
 }
 
 body {
@@ -60,7 +62,10 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     background: linear-gradient(135deg, var(--light-cream) 0%, var(--light-ivory) 100%);
+    /* Ensure no horizontal overflow */
     overflow-x: hidden;
+    /* Prevent pull-to-refresh on mobile */
+    overscroll-behavior: none;
 }
 
 /* Typography */
@@ -101,6 +106,8 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    /* Prevent container from causing overflow */
+    overflow-x: hidden;
 }
 
 /* Buttons */
@@ -172,6 +179,8 @@ a {
 /* Section Spacing */
 section {
     padding: 80px 0;
+    /* Prevent sections from overflowing */
+    overflow-x: hidden;
 }
 
 .section-header {

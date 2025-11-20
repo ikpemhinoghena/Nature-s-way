@@ -9,6 +9,8 @@
     right: 0;
     z-index: 1000;
     transition: var(--transition);
+    /* Prevent header from causing horizontal overflow */
+    overflow-x: hidden;
 }
 
 .header.scrolled {
@@ -21,6 +23,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    /* Prevent nav from causing horizontal overflow */
+    overflow-x: hidden;
 }
 
 /* Logo */
@@ -162,7 +166,8 @@
     position: relative;
     background: linear-gradient(135deg, var(--primary-deep) 0%, var(--primary-forest) 50%, var(--primary-emerald) 100%);
     color: var(--white);
-    overflow: hidden;
+    /* Prevent hero from causing horizontal overflow */
+    overflow-x: hidden;
 }
 
 .hero-background {
@@ -193,6 +198,8 @@
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    /* Prevent content from overflowing */
+    overflow-x: hidden;
 }
 
 .hero-badge {
@@ -292,12 +299,16 @@
 /* Features Section */
 .features {
     background: var(--white);
+    /* Prevent features section from causing overflow */
+    overflow-x: hidden;
 }
 
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    /* Prevent grid from causing overflow */
+    overflow-x: hidden;
 }
 
 .feature-card {
@@ -308,6 +319,8 @@
     box-shadow: var(--shadow-md);
     transition: var(--transition);
     border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Prevent cards from causing overflow */
+    overflow-x: hidden;
 }
 
 .feature-card:hover {
@@ -356,6 +369,8 @@
 /* Impact Section */
 .impact {
     background: linear-gradient(135deg, var(--light-cream) 0%, var(--white) 100%);
+    /* Prevent impact section from causing overflow */
+    overflow-x: hidden;
 }
 
 .impact-content {
@@ -363,6 +378,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    /* Prevent content from causing overflow */
+    overflow-x: hidden;
 }
 
 .impact-text h2 {
@@ -422,6 +439,8 @@
     justify-content: center;
     position: relative;
     animation: rotate 20s linear infinite;
+    /* Ensure circle doesn't cause overflow */
+    max-width: 100%;
 }
 
 .impact-circle::before {
@@ -459,6 +478,8 @@
 .herbs-carousel {
     background: var(--white);
     padding: 5rem 0;
+    /* Prevent carousel from causing overflow */
+    overflow-x: hidden;
 }
 
 /* New Herbalist Consultation Section */
@@ -469,6 +490,8 @@
     box-shadow: var(--shadow-md);
     text-align: center;
     margin-bottom: 3rem;
+    /* Prevent consultation section from causing overflow */
+    overflow-x: hidden;
 }
 
 .consultation-content {
@@ -477,6 +500,8 @@
     gap: 3rem;
     align-items: center;
     margin-bottom: 2rem;
+    /* Prevent content from causing overflow */
+    overflow-x: hidden;
 }
 
 .consultation-text {
@@ -527,6 +552,8 @@
     justify-content: center;
     color: var(--white);
     font-size: 5rem;
+    /* Ensure image doesn't cause overflow */
+    max-width: 100%;
 }
 
 .consultation-cta .btn {
@@ -544,6 +571,8 @@
     position: relative;
     overflow: hidden;
     border-radius: var(--radius-lg);
+    /* Prevent container from causing overflow */
+    overflow-x: hidden;
 }
 
 .carousel-track {
@@ -551,6 +580,8 @@
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     gap: 2rem;
     padding: 1rem 0;
+    /* Prevent track from causing overflow */
+    overflow-x: hidden;
 }
 
 .herb-card {
@@ -562,6 +593,8 @@
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    /* Prevent cards from causing overflow */
+    overflow-x: hidden;
 }
 
 .herb-card:hover {
@@ -579,12 +612,16 @@
     font-size: 3rem;
     position: relative;
     overflow: hidden;
+    /* Ensure images don't cause overflow */
+    max-width: 100%;
 }
 
 .herb-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* Ensure images don't cause overflow */
+    max-width: 100%;
 }
 
 .herb-badge {
@@ -698,6 +735,8 @@
 .why-choose {
     background: linear-gradient(135deg, var(--primary-deep) 0%, var(--primary-forest) 100%);
     color: var(--white);
+    /* Prevent section from causing overflow */
+    overflow-x: hidden;
 }
 
 .why-choose-content {
@@ -705,6 +744,8 @@
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
     align-items: center;
+    /* Prevent content from causing overflow */
+    overflow-x: hidden;
 }
 
 .why-text h2 {
@@ -760,6 +801,8 @@
     padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
+    /* Ensure card doesn't cause overflow */
+    max-width: 100%;
 }
 
 .visual-card h3 {
@@ -775,6 +818,8 @@
 /* Newsletter */
 .newsletter {
     background: var(--light-cream);
+    /* Prevent newsletter from causing overflow */
+    overflow-x: hidden;
 }
 
 .newsletter-content {
@@ -796,141 +841,6 @@
 .newsletter-form {
     max-width: 500px;
     margin: 0 auto;
-}
-
-.form-group {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.form-group input {
-    flex: 1;
-    padding: 12px 20px;
-    border: 2px solid var(--primary-emerald);
-    border-radius: 50px;
-    font-family: var(--font-modern);
-    font-size: 1rem;
-    background: var(--white);
-    transition: var(--transition);
-}
-
-.form-group input:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
-}
-
-.form-note {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    margin: 0;
-}
-
-/* Footer */
-.footer {
-    background: var(--dark-charcoal);
-    color: var(--white);
-    padding: 60px 0 0;
-}
-
-.footer-main {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
-    margin-bottom: 3rem;
-}
-
-.footer-brand p {
-    color: rgba(255, 255, 255, 0.8);
-    margin: 1rem 0 1.5rem;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-links a {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-full);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-}
-
-.social-links a:hover {
-    background: var(--primary-emerald);
-    transform: translateY(-3px);
-}
-
-.footer-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.link-group h4 {
-    color: var(--white);
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-}
-
-.link-group ul li {
-    margin-bottom: 0.8rem;
-}
-
-.link-group a {
-    color: rgba(255, 255, 255, 0.7);
-    transition: var(--transition);
-}
-
-.link-group a:hover {
-    color: var(--primary-emerald);
-    padding-left: 5px;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.footer-legal {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.footer-legal p {
-    margin: 0;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.legal-links {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.legal-links a {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-}
-
-.legal-links a:hover {
-    color: var(--primary-emerald);
-}
-
-.payment-methods {
-    display: flex;
-    gap: 1rem;
-    font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.7);
+    /* Prevent form from causing overflow */
+    overflow-x: hidden;
 }

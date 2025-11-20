@@ -10,6 +10,8 @@
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/hero-bg.jpg') center/cover no-repeat;
   color: var(--white);
   text-align: center;
+  /* Prevent horizontal overflow */
+  overflow-x: hidden;
 }
 
 .hero-overlay {
@@ -23,6 +25,8 @@
   z-index: 2;
   max-width: 800px;
   padding: 0 var(--space-sm);
+  /* Prevent content overflow */
+  overflow-x: hidden;
 }
 
 .hero-title {
@@ -43,11 +47,16 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--space-lg);
   align-items: center;
+  /* Prevent container overflow */
+  overflow-x: hidden;
 }
 
 .impact-image img {
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-md);
+  /* Ensure image doesn't cause overflow */
+  max-width: 100%;
+  height: auto;
 }
 
 .impact-stats {
@@ -55,6 +64,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-sm);
   margin-top: var(--space-md);
+  /* Prevent stats overflow */
+  overflow-x: hidden;
 }
 
 .impact-stats li {
@@ -77,6 +88,8 @@
   background: linear-gradient(to right, var(--primary), var(--primary-light));
   color: var(--white);
   text-align: center;
+  /* Prevent section overflow */
+  overflow-x: hidden;
 }
 
 .newsletter-box {
@@ -90,6 +103,8 @@
   gap: var(--space-sm);
   margin: var(--space-md) auto;
   max-width: 500px;
+  /* Prevent form overflow */
+  overflow-x: hidden;
 }
 
 .newsletter-form input {
@@ -98,6 +113,8 @@
   border: none;
   border-radius: var(--border-radius);
   font-family: var(--font-body);
+  /* Ensure inputs don't cause overflow */
+  min-width: 0;
 }
 
 .newsletter-form button {
@@ -115,6 +132,8 @@
   background: var(--dark);
   color: var(--light);
   padding: var(--space-lg) 0;
+  /* Prevent footer overflow */
+  overflow-x: hidden;
 }
 
 .footer-grid {
@@ -122,6 +141,8 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-md);
   margin-bottom: var(--space-lg);
+  /* Prevent grid overflow */
+  overflow-x: hidden;
 }
 
 .social-icons a {
@@ -142,13 +163,41 @@
   border-top: 1px solid rgba(255,255,255,0.1);
   font-size: 0.9rem;
   opacity: 0.7;
+  /* Prevent bottom overflow */
+  overflow-x: hidden;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero-title { font-size: 2.5rem; }
-  .hero-subtitle { font-size: 1.2rem; }
-  .impact-container { grid-template-columns: 1fr; }
-  .impact-stats { grid-template-columns: 1fr; }
-  .newsletter-form { flex-direction: column; }
+  .hero-title { 
+    font-size: 2.5rem; 
+  }
+  
+  .hero-subtitle { 
+    font-size: 1.2rem; 
+  }
+  
+  .impact-container { 
+    grid-template-columns: 1fr;
+    /* Prevent container overflow on mobile */
+    overflow-x: hidden;
+  }
+  
+  .impact-stats { 
+    grid-template-columns: 1fr;
+    /* Prevent stats overflow on mobile */
+    overflow-x: hidden;
+  }
+  
+  .newsletter-form { 
+    flex-direction: column;
+    /* Prevent form overflow on mobile */
+    overflow-x: hidden;
+  }
+  
+  /* Ensure all elements respect container boundaries */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 }

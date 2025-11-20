@@ -37,10 +37,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* Prevent elements from causing horizontal overflow */
+  max-width: 100%;
 }
 
 html {
   scroll-behavior: smooth;
+  /* Prevent horizontal overflow */
+  overflow-x: hidden;
 }
 
 body {
@@ -48,6 +52,10 @@ body {
   color: var(--dark);
   background-color: var(--white);
   line-height: 1.6;
+  /* Prevent horizontal overflow */
+  overflow-x: hidden;
+  /* Prevent pull-to-refresh on mobile */
+  overscroll-behavior: none;
 }
 
 h1, h2, h3, h4 {
@@ -65,6 +73,7 @@ a {
 img {
   max-width: 100%;
   display: block;
+  height: auto; /* Maintain aspect ratio */
 }
 
 ul {
@@ -74,10 +83,14 @@ ul {
 .container {
   width: min(90%, 1200px);
   margin-inline: auto;
+  /* Prevent container overflow */
+  overflow-x: hidden;
 }
 
 .section {
   padding: var(--space-lg) 0;
+  /* Prevent section overflow */
+  overflow-x: hidden;
 }
 
 .section-title {
