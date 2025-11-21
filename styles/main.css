@@ -20,21 +20,21 @@
     --text-light: #64748b;
     --white: #ffffff;
     --off-white: #f8fafc;
-    
+
     /* Typography */
     --font-elegant: 'Cormorant Garamond', serif;
     --font-modern: 'Inter', sans-serif;
     --font-classic: 'Playfair Display', serif;
-    
+
     /* Effects */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    
+
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    
+
     /* Border Radius */
     --radius-sm: 8px;
     --radius-md: 12px;
@@ -69,7 +69,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-elegant);
     font-weight: 600;
     line-height: 1.2;
@@ -107,7 +112,7 @@ a {
     margin: 0 auto;
     padding: 0 20px;
     /* Prevent container from causing overflow */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 /* Buttons */
@@ -134,7 +139,7 @@ a {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.5s;
 }
 

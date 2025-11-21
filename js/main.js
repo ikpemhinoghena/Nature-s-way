@@ -14,18 +14,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.querySelector('.nav-links');
     
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking on links
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent event bubbling
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            
+            // Force a reflow to ensure the display change takes effect
+            navLinks.offsetHeight;
         });
-    });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && 
+                !navLinks.contains(e.target) && 
+                e.target !== menuToggle && 
+                !menuToggle.contains(e.target)) {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    }
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -74,10 +91,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Search functionality
     const searchBtn = document.querySelector('.search-btn');
-    searchBtn.addEventListener('click', function() {
-        // Implement search modal or redirect to search page
-        alert('Search functionality will be implemented in the shop page!');
-    });
+    if (searchBtn) {
+        searchBtn.addEventListener('click', function() {
+            // Implement search modal or redirect to search page
+            alert('Search functionality will be implemented in the shop page!');
+        });
+    }
 
     // Initialize components
     initializeHeroAnimation();
@@ -88,81 +107,46 @@ document.addEventListener('DOMContentLoaded', function() {
 // Hero section animations
 function initializeHeroAnimation() {
     const heroTitle = document.querySelector('.hero-title');
-    heroTitle.style.opacity = '0';
-    heroTitle.style.transform = 'translateY(30px)';
-    
-    setTimeout(() => {
-        heroTitle.style.transition = 'all 0.8s ease';
-        heroTitle.style.opacity = '1';
-        heroTitle.style.transform = 'translateY(0)';
-    }, 300);
+    if (heroTitle) {
+        heroTitle.style.opacity = '0';
+        heroTitle.style.transform = 'translateY(30px)';
+        
+        setTimeout(() => {
+            heroTitle.style.transition = 'all 0.8s ease';
+            heroTitle.style.opacity = '1';
+            heroTitle.style.transform = 'translateY(0)';
+        }, 300);
+    }
 }
 
 // Feature cards hover effects
 function initializeFeatureCards() {
     const featureCards = document.querySelectorAll('.feature-card');
-    
     featureCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
+            this.style.transform = 'translateY(-5px)';
+            this.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
         });
         
         card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = 'var(--shadow-md)';
         });
     });
 }
 
-// Impact section animations
+// Impact section animation
 function initializeImpactAnimation() {
-    const impactStats = document.querySelectorAll('.impact-stat');
+    const impactSection = document.querySelector('.impact-section');
+    if (!impactSection) return;
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('animate');
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.1 });
     
-    impactStats.forEach(stat => {
-        stat.style.opacity = '0';
-        stat.style.transform = 'translateY(20px)';
-        stat.style.transition = 'all 0.6s ease';
-        observer.observe(stat);
-    });
-}
-
-// Utility function for loading JSON data
-async function loadJSON(url) {
-    try {
-        const response = await fetch(url);
-        return await response.json();
-    } catch (error) {
-        console.error('Error loading JSON:', error);
-        return null;
-    }
-}
-
-// Utility function for API calls
-async function makeAPICall(url, options = {}) {
-    try {
-        const response = await fetch(url, {
-            headers: {
-                'Content-Type': 'application/json',
-                ...options.headers
-            },
-            ...options
-        });
-        
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        return await response.json();
-    } catch (error) {
-        console.error('API call failed:', error);
-        return null;
-    }
+    observer.observe(impactSection);
 }
