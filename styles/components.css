@@ -106,7 +106,8 @@
     gap: 1rem;
 }
 
-.search-btn, .cart-btn {
+.search-btn,
+.cart-btn {
     background: none;
     border: none;
     font-size: 1.2rem;
@@ -117,7 +118,8 @@
     transition: var(--transition);
 }
 
-.search-btn:hover, .cart-btn:hover {
+.search-btn:hover,
+.cart-btn:hover {
     background: var(--light-cream);
     color: var(--primary-emerald);
 }
@@ -192,7 +194,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
+    background:
         radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 40% 40%, rgba(132, 204, 22, 0.05) 0%, transparent 50%);
@@ -294,9 +296,12 @@
 }
 
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: rotate(45deg) translate(0, 0);
     }
+
     50% {
         transform: rotate(45deg) translate(-10px, -10px);
     }
@@ -376,7 +381,7 @@
 .impact {
     background: linear-gradient(135deg, var(--light-cream) 0%, var(--white) 100%);
     /* Prevent impact section from causing overflow */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .impact-content {
@@ -385,7 +390,7 @@
     gap: 4rem;
     align-items: center;
     /* Prevent content from causing overflow */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .impact-text h2 {
@@ -435,11 +440,9 @@
     width: 300px;
     height: 300px;
     border-radius: var(--radius-full);
-    background: conic-gradient(
-        var(--primary-emerald) 0% 33%,
-        var(--secondary-amber) 33% 66%,
-        var(--accent-sage) 66% 100%
-    );
+    background: conic-gradient(var(--primary-emerald) 0% 33%,
+            var(--secondary-amber) 33% 66%,
+            var(--accent-sage) 66% 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -475,6 +478,7 @@
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -967,9 +971,249 @@
     color: var(--accent-mint);
 }
 
+.reason {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.reason i {
+    font-size: 1.5rem;
+    color: var(--secondary-sun);
+    margin-top: 0.25rem;
+}
+
+.reason h4 {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.reason p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.why-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.visual-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    /* Ensure card doesn't cause overflow */
+    max-width: 100%;
+}
+
+.visual-card h3 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.visual-card p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+}
+
+/* Newsletter */
+.newsletter {
+    background: var(--light-cream);
+    /* Prevent newsletter from causing overflow */
+    overflow-x: hidden;
+}
+
+.newsletter-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-text h2 {
+    color: var(--primary-deep);
+    margin-bottom: 1rem;
+}
+
+.newsletter-text p {
+    color: var(--text-medium);
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    max-width: 500px;
+    margin: 0 auto;
+    /* Prevent form from causing overflow */
+    overflow-x: hidden;
+}
+
+/* Footer */
+.footer {
+    background: #1a252f;
+    color: white;
+    padding: 4rem 0 2rem;
+    overflow-x: hidden;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 4rem;
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 1rem 0;
+    max-width: 300px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--primary-emerald);
+    transform: translateY(-3px);
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.link-group h4 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.link-group ul {
+    list-style: none;
+}
+
+.link-group li {
+    margin-bottom: 0.8rem;
+}
+
+.link-group a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.link-group a:hover {
+    color: var(--accent-mint);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 1rem;
+}
+
+.footer-legal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-legal p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.legal-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.legal-links a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: var(--accent-mint);
+}
+
 .payment-methods {
     display: flex;
     gap: 1rem;
     color: rgba(255, 255, 255, 0.7);
     font-size: 1.5rem;
+}
+
+/* Newsletter Input Styles */
+.newsletter-form input {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--white);
+    font-family: var(--font-modern);
+    font-size: 1rem;
+    color: var(--text-dark);
+    outline: none;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.newsletter-form input:focus {
+    border-color: var(--primary-emerald);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.newsletter-form input::placeholder {
+    color: var(--text-light);
+}
+
+.form-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .form-group {
+        flex-wrap: nowrap;
+    }
+
+    .newsletter-form input {
+        flex-grow: 1;
+    }
+
+    .newsletter-form button {
+        flex-shrink: 0;
+    }
 }
